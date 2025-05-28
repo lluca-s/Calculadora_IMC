@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <div class="theme-toggle" id="themeToggle">
+        <div class="toggle-track">
+            <div class="toggle-thumb"></div>
+        </div>
+        <span class="toggle-icon sun">☀️</span>
+        <span class="toggle-icon moon">🌙</span>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h1>Calculadora de IMC</h1>
+            <div class="input-group">
+                <label for="weight">Peso (kg)</label>
+                <input type="number" id="weight" placeholder="Ex: 70" min="1" step="0.1">
+            </div>
+            <div class="input-group">
+                <label for="height">Altura (cm)</label>
+                <input type="number" id="height" placeholder="Ex: 170" min="1">
+            </div>
+            <button id="calculateBtn">Calcular IMC</button>
+            
+            <div class="result-container" id="resultContainer">
+                <h2>Seu IMC: <span id="bmiValue">--</span></h2>
+                <div id="bmiCategory" class="result-category"></div>
+                <p id="bmiMessage"></p>
+            </div>
+        </div>
+
+        <div class="bmi-info">
+            <h3>O que é IMC?</h3>
+            <p>O Índice de Massa Corporal (IMC) é uma medida que relaciona o peso e a altura para avaliar se a pessoa está com o peso adequado.</p>
+            
+            <h3>Classificação do IMC</h3>
+            <div class="bmi-ranges">
+                <div class="bmi-range" style="background-color: rgba(244, 67, 54, 0.2);">
+                    Abaixo do Peso<br>IMC < 18.5
+                </div>
+                <div class="bmi-range" style="background-color: rgba(76, 175, 80, 0.2);">
+                    Peso Normal<br>IMC 18.5-24.9
+                </div>
+                <div class="bmi-range" style="background-color: rgba(255, 193, 7, 0.2);">
+                    Sobrepeso<br>IMC 25-29.9
+                </div>
+                <div class="bmi-range" style="background-color: rgba(244, 67, 54, 0.2);">
+                    Obesidade<br>IMC ≥ 30
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Essa calculadora serve apenas como referência. Consulte um profissional de saúde para uma avaliação completa.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
